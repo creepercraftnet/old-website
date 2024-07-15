@@ -1,2 +1,2 @@
-# creepercraftoff.github.io
-is an opensource website off creepercraft
+# The official Creepercraft INc. website
+this an opensource website of Creepercraft Inc.
