@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    /* Center the container */
+    .container {
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    /* Set a style for the submit button */
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    /* Add a hover effect for buttons */
+    button:hover {
+      opacity: 0.8;
+    }
+    /* Add padding to container elements */
+    .container {
+      padding: 16px;
+    }
+    /* The message box is shown when the user clicks the "Forgot password?" link */
+    .message {
+      display:none;
+      background-color: #f1f1f1;
+      color: #000000;
+      position: relative;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    /* Add a red background color to the cancel button */
+    .cancelbtn {
+      background-color: #f44336;
+    }
+    /* Add some hover effects to buttons */
+    .cancelbtn:hover, .signupbtn:hover {
+      opacity: 0.8;
+    }
+    /* The close button */
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000000;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: #f44336;
+      cursor: pointer;
+    }
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)} 
+      to {-webkit-transform: scale(1)}
+    }
+      
+    @keyframes animatezoom {
+      from {transform: scale(0)} 
+      to {transform: scale(1)}
+    }
+    /* Media queries - Responsive design */
+    @media screen and (max-width: 768px) {
+      /* Allow form to stack on mobile devices */
+      .container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Login Form</h2>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <div class="message">
+      <h3>Forgot your password?</h3>
+      <p>Enter your email address and we'll send you a link to reset your password.</p>
+    </div>
+    
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </div>
+  <script>
+    // Get the message box
+    var messageBox = document.getElementsByClassName("message")[0];
+    // Get the login button
+    var loginButton = document.getElementsByTagName("button")[0];
+    // When the user clicks the "Forgot password?" link
+    function forgotPassword() {
