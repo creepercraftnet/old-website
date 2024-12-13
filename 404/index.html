@@ -5,7 +5,158 @@
       <meta charset="utf-8">
       <title>404 Error | Creepercraft</title>
      <link rel="shortcut icon" href="/assets/img/favicon.ico" />
-      <link rel="stylesheet" href="/404/style.css">
+      <style>
+         @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+  --primary-orange: #ffa500;
+  --secondary-orange: #ff8c00;
+  --dark-bg: #111111;
+  --text-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: -webkit-repeating-linear-gradient(-45deg, #1a1a1a, #000000, #262626, #1a1a1a);
+  background-size: 400%;
+}
+
+#error-page {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.content {
+  background: var(--dark-bg);
+  box-shadow: 0px 5px 20px rgba(255, 165, 0, 0.2);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border-radius: 1rem;
+  width: min(90%, 600px);
+  text-align: center;
+}
+
+.header {
+  font-size: clamp(4rem, 20vw, 12rem);
+  line-height: 1;
+  position: relative;
+  margin-bottom: 0.5em;
+  display: inline-block; /* Makes the container fit the content */
+  width: 100%;
+}
+
+.header:after {
+  position: absolute;
+  content: attr(data-text);
+  inset: 0;
+  background: -webkit-repeating-linear-gradient(
+    -45deg,
+    var(--primary-orange),
+    var(--secondary-orange),
+    #ff7f00,
+    var(--primary-orange)
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: animate 10s ease-in-out infinite;
+  width: 100%;
+  display: block;
+}
+
+@keyframes animate {
+  0%, 100% { background-position: 0 0; }
+  25% { background-position: 100% 0; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+.content h4 {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: var(--primary-orange);
+  position: relative;
+  display: inline-block; /* Makes the container fit the content */
+}
+
+.content h4:after {
+  position: absolute;
+  content: attr(data-text);
+  inset: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+  display: block;
+}
+
+.content p {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.btns a {
+  flex: 1;
+  min-width: min(100%, 200px);
+  text-decoration: none;
+  border: 2px solid var(--primary-orange);
+  color: var(--primary-orange);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  white-space: nowrap;
+}
+
+.btns a:hover {
+  background: linear-gradient(45deg, var(--primary-orange), var(--secondary-orange));
+  border-color: transparent;
+  color: var(--dark-bg);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 1rem;
+  }
+  
+  .btns {
+    flex-direction: column;
+  }
+  
+  .btns a {
+    width: 100%;
+  }
+}
+      </style>
    </head>
    <body>
       <div id="error-page">
